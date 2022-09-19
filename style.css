@@ -4,6 +4,7 @@
     font-family: 'Josefin Sans', sans-serif;
     box-sizing: border-box;
 }
+/* rgb(218, 43, 43) */
 .hero{
     height: 100vh;
     width: 100%;
@@ -46,6 +47,9 @@ nav ul li a:hover{
     color: rgb(218, 43, 43);
     transition: .4s;
 }
+a{
+    text-decoration: none;
+}
 .btn{
     background-color: rgb(218, 43, 43);
     color: white;
@@ -55,6 +59,56 @@ nav ul li a:hover{
     padding: 10px 25px;
     transition: transform .4s;
 }
+
 .btn:hover{
     transform: scale(1.2);
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+h1{
+    color: #fff;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+h3{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+h4{
+    color: rgb(225, 111, 54);
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.newsletter form{
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+}
+.newsletter form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 1px solid rgb(218, 43, 43) ;
+    outline: none;
+    border-radius: 30px;
+}
+.newsletter form input:last-child{
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: rgb(218, 43, 43);
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    top: 6px;
+    right: 6px;
+}
+.content h1 span{
+    color: rgb(218, 43, 43);
 }
