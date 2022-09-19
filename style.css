@@ -8,7 +8,7 @@
 .hero{
     height: 100vh;
     width: 100%;
-    background-image: url(./images/pic11.jpg);
+    background-image: url(./images/pic1.jpg);
     background-position: center;
     background-size: contain;
 }
@@ -27,11 +27,9 @@ nav{
     cursor: pointer;
 }
 span{
-    color: #000;
+    color: #f9004d;
 }
-span:hover{
-    color: rgb(218, 43, 43);
-}
+
 nav ul li{
     list-style-type: none;
     display: inline-block;
@@ -44,14 +42,14 @@ nav ul li a{
     text-transform: capitalize;
 }
 nav ul li a:hover{
-    color: rgb(218, 43, 43);
+    color: #f9004d;
     transition: .4s;
 }
 a{
     text-decoration: none;
 }
 .btn{
-    background-color: rgb(218, 43, 43);
+    background-color: #f9004d;
     color: white;
     border: 2px solid transparent;
     border-radius: 30px;
@@ -80,7 +78,7 @@ h3{
     margin-bottom: 50px;
 }
 h4{
-    color: rgb(225, 111, 54);
+    color: #fcfc;
     letter-spacing: 2px;
     font-size: 20px;
 }
@@ -93,7 +91,7 @@ h4{
     display: inline-block;
     width: 100%;
     padding: 14px 130px 14px 15px;
-    border: 1px solid rgb(218, 43, 43) ;
+    border: 1px solid #f9004d ;
     outline: none;
     border-radius: 30px;
 }
@@ -104,11 +102,64 @@ h4{
     border: none;
     padding: 10px 30px;
     border-radius: 30px;
-    background-color: rgb(218, 43, 43);
+    background-color: #f9004d;
     box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
     top: 6px;
     right: 6px;
 }
-.content h1 span{
-    color: rgb(218, 43, 43);
+
+.about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #191919;
+}
+.about img{
+    height: auto;
+    width: 430px;
+}
+.about-text{
+    width: 550px;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-text h2{
+    color: #fff;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.about-text h5{
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+.about-text p{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+button{
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+button:hover{
+    background-color: transparent;
+    border: 2px solid #f9004d;
+    cursor: pointer;
 }
