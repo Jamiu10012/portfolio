@@ -548,10 +548,15 @@ footer{
         left: 18%;
 
         h1{
-            color: $light-color;
+            color: $red-color;
             margin: 10px 0px 10px;
             font-size: 40px;
+            
+            span{
+                color: #fff;
+            }
         }
+
         h3{
             color: #000;
             font-size: 25px;
@@ -576,7 +581,7 @@ footer{
                 text-decoration: none;
                 border: 2px solid transparent;
                 font-weight: bold;
-                padding: 13px 30px;
+                padding: 13px 50px;
                 border-radius: 30px;
                 transition: .4s;
                 

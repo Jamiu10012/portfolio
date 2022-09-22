@@ -609,9 +609,12 @@ footer .end {
     left: 18%;
   }
   .content h1 {
-    color: white;
+    color: #f9004d;
     margin: 10px 0px 10px;
     font-size: 40px;
+  }
+  .content h1 span {
+    color: #fff;
   }
   .content h3 {
     color: #000;
@@ -636,7 +639,7 @@ footer .end {
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
-    padding: 13px 30px;
+    padding: 13px 50px;
     border-radius: 30px;
     -webkit-transition: .4s;
     transition: .4s;
