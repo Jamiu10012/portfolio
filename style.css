@@ -632,14 +632,14 @@ footer .end {
   }
   .content .newsletter form input:last-child {
     top: 40px;
-    right: 80px;
+    right: 90px;
     font-weight: bold;
     background-color: #f9004d;
     color: white;
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
-    padding: 13px 50px;
+    padding: 30px 50px;
     border-radius: 30px;
     -webkit-transition: .4s;
     transition: .4s;
