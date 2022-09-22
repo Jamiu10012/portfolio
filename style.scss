@@ -562,17 +562,44 @@ footer{
             letter-spacing: 2px;
             font-size: 20px;
         }
-        .newsletter form {
+        .newsletter form{
+            max-width: 100%;
+            position: relative;
+    
             input:first-child{
+                display: inline-block;
                 width: 100%;
                 padding: 10px 60px 8px 5px;
+                border: 1px solid #f9004d ;
+                outline: none;
+                border-radius: 30px;
             }
-            input:last-child{
+             input:last-child{
+                position: absolute;
+                display: inline-block;
+                outline: none;
+                border: none;
+                padding: 10px 30px;
+                border-radius: 30px;
+                background-color: #f9004d;
+                box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
                 top: 40px;
                 right: 60px;
                 font-weight: bold;
             }
         }
+        // .newsletter form {
+        //     input:first-child{
+        //         width: 100%;
+        //         padding: 10px 60px 8px 5px;
+        //     }
+        //     input:last-child{
+        //         top: 40px;
+        //         right: 60px;
+        //         box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+        //         font-weight: bold;
+        //     }
+        // }
     
     }
     .about{
