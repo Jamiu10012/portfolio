@@ -536,7 +536,7 @@ footer .end {
   .content .newsletter form input:first-child {
     display: inline-block;
     width: 100%;
-    padding: 10px 60px 8px 5px;
+    padding: 14px 130px 14px 15px;
     border: 1px solid #f9004d;
     outline: none;
     border-radius: 30px;
@@ -551,9 +551,8 @@ footer .end {
     background-color: #f9004d;
     -webkit-box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
             box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-    top: 40px;
-    right: 60px;
-    font-weight: bold;
+    top: 6px;
+    right: 6px;
   }
   .about {
     padding: 40px 0px;
@@ -656,7 +655,7 @@ footer .end {
   .content .newsletter form input:first-child {
     display: inline-block;
     width: 100%;
-    padding: 10px 60px 8px 5px;
+    padding: 14px 130px 14px 15px;
     border: 1px solid #f9004d;
     outline: none;
     border-radius: 30px;
@@ -671,9 +670,8 @@ footer .end {
     background-color: #f9004d;
     -webkit-box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
             box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-    top: 40px;
-    right: 60px;
-    font-weight: bold;
+    top: 6px;
+    right: 6px;
   }
   .about {
     padding: 40px 0px;
