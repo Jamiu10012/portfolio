@@ -13,7 +13,7 @@ $dark-color: #fcfc;
     height: 90vh;
     background-image: url(images/pic1.jpg);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
 
     nav{
         display: flex;
@@ -23,6 +23,7 @@ $dark-color: #fcfc;
         padding-left: 8%;
         padding-right: 8%;
     }
+    
     .logo{
         color: $light-color;
         font-size: 35px;
@@ -65,6 +66,14 @@ $dark-color: #fcfc;
     .btn:hover{
         transform: scale(1.2);
     }
+    #menu{
+        font-size: 2rem;
+        border-radius: .5rem;
+        color: $light-color;
+        cursor: pointer;
+        display: none;
+    }
+    
 }
 span{
     color: $red-color;
@@ -76,20 +85,24 @@ span{
     left: 8%;
     transform: translateY(-50%);
 
+    a{
+        margin-left: 10rem;
+    }
+
     h1{
         color: $light-color;
-        margin: 20px 0px 20px;
-        font-size: 75px;
+        margin: 20px 0px 2px;
+        font-size: 80px;
     }
     h3{
-        color: $light-color;
-        font-size: 25px;
+        color: $red-color;
+        font-size: 35px;
         margin-bottom: 50px;
     }
     h4{
-        color: $dark-color;
+        color: $red-color;
         letter-spacing: 2px;
-        font-size: 20px;
+        font-size: 30px;
     }
     .newsletter form{
         max-width: 100%;
@@ -146,6 +159,14 @@ span{
                 text-transform: capitalize;
                 margin-bottom: 20px;
             }
+            h2:hover::after{
+                content: '';
+                background: $red-color;
+                display: block;
+                height: 3px;
+                width: 250px;
+                margin: 1px 40px 10px;
+             }
             h5{
                 color: #fff;
                 letter-spacing: 2px;
@@ -192,6 +213,15 @@ span{
         margin: 30px auto;
         text-align: center;
     }
+    .title h2:hover::after{
+        content: '';
+        background: $red-color;
+        display: block;
+        height: 3px;
+        width: 250px;
+        margin: 1px auto 10px;
+     }
+    
     .box{
         display: flex;
         justify-content: center;
@@ -242,6 +272,10 @@ span{
                 border: 2px solid #f9004d;
                 cursor: pointer;
             }
+        }
+        .card:hover{
+            transform: scale(1);
+            box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
         }
         
     }
@@ -328,7 +362,33 @@ footer{
         font-size: 14px;
     }
 }
-@media only screen and (max-width: 1046px){
+@media only screen and (max-width: 1040px){
+    .hero{
+        background-size: cover;
+        nav{
+            
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        nav ul li{
+            padding: 10px 20px;
+        }
+    }
+    .content{
+        top: 60%;
+
+        h4{
+            font-size: 35px;
+        }
+        h1{
+            color: #000;
+            font-size: 70px;
+        }
+        h3{
+            font-size: 38px;
+        }
+    }
+    
     .about{
         .main{
            
@@ -343,15 +403,18 @@ footer{
     .hero{
         height: 100vh;
         nav{
-            padding-top: 5px;
-            padding-left: 8%;
-            padding-right: 8%;
+            padding-top: 10px;
+            padding-left: 2%;
+            padding-right: 2%;
             .logo{
-                font-size: 20px;
-                margin-left: 2px;
+                font-size: 25px;
+                margin-left: 20px;
+            }
+            .btn{
+                padding: 10px 10px;
+                border-radius: 30px;
             }
         }
-
     }
     .content{
         top: 60%;
@@ -428,16 +491,49 @@ footer{
         }
     }
 }
+@media only screen and (max-width: 770px){
+    .hero{
+        #menu{
+            display: initial;
+            padding: 1rem 1.5rem;
+        }
+        .navbar{
+            position: absolute;
+            top: 11%;
+            right: 0rem;
+            border-radius: .5rem;
+            width: 200px;
+            background: #fff;
+            border: 2px solid $red-color;
+            transform: scale(0);
+            opacity: 0;
+            transform-origin: top right;
+            transition: none;
+
+            
+        }
+        .navbar a{
+            font-size: 1rem;
+            display: block;
+            color: #000;
+            margin: 0.5rem;
+            margin-bottom: 0px;
+        }
+        .navbar.active{
+            transform: scale(1);
+            opacity: 1;
+            transition: .2s ease-out;
+        }
+        
+        
+    }
+}
 @media only screen and (max-width: 700px){
     .hero{
         height: 90vh;
         nav{
-            padding-top: 3px;
-            padding-left: 2%;
-            padding-right: 2%;
-       
             .logo{
-                font-size: 10px;
+                font-size: 20px;
                 margin-left: 2px;
             } 
         }
@@ -482,6 +578,7 @@ footer{
             text-align: center;
             .about-text{
                 width: 350px;
+                margin-left: 130px;
                 h2{
                     font-size: 60px;
                     margin-left: 30px;
@@ -493,6 +590,7 @@ footer{
                 p{
                 margin-left: 40px;
                 margin-right: 0px;
+                font-size: 18px;
                 }
                 button{
                     margin-left: 50px;
@@ -516,22 +614,45 @@ footer{
         }
     }
 }
+@media only screen and (max-width: 600px){
+    .about{
+        .main{
+            .about-text{
+                width: 350px;
+                margin-left: 70px;
+                color: #000;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 588px){
+    .hero{
+        
+        .navbar{
+            width: 150px;
+        }
+    }
+}
+@media only screen and (max-width: 529px){
+    .hero{
+        
+        .navbar{
+            top: 9%;
+            width: 200px;
+        }
+        .navbar a{
+            margin: 0.1rem;
+        }
+    }
+}
 @media only screen and (max-width: 500px){
     .hero{
         height: 60vh;
 
         nav{
-            padding-top: 20px;
-            padding-left: 8%;
-            padding-right: 8%;
-
             .logo{
-                font-size: 15px;
+                font-size: 20px;
                 margin-left: 2px;
-            }
-            ul li{
-                
-                padding: 3px 5px;
             }
             .btn{
                 font-size: 15px;
@@ -540,32 +661,39 @@ footer{
                 transition: .4s;
             }
         }
+        .navbar{
+            top: 8%;
+        }
         
     }
     
     .content{
         top: 35%;
-        left: 18%;
+        left: 15%;
 
+        a{
+            margin-left: 5rem;
+        }
         h1{
-            color: $red-color;
+            color: #000;
             margin: 10px 0px 10px;
             font-size: 40px;
             
             span{
-                color: #fff;
+                color: #000;
             }
         }
 
         h3{
-            color: #000;
-            font-size: 25px;
-            margin-bottom: 50px;
+            color: #fe1a63;
+            font-size: 26px;
+            margin-bottom: 20px;
         }
         h4{
-            color: $light-color;
+            color: $red-color;
             letter-spacing: 2px;
             font-size: 20px;
+            margin-top: 60px;
         }
         .newsletter form {
             input:first-child{

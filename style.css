@@ -10,7 +10,7 @@
   height: 90vh;
   background-image: url(images/pic1.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 }
 
 .hero nav {
@@ -74,6 +74,14 @@
           transform: scale(1.2);
 }
 
+.hero #menu {
+  font-size: 2rem;
+  border-radius: .5rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
 span {
   color: #f9004d;
 }
@@ -86,22 +94,26 @@ span {
           transform: translateY(-50%);
 }
 
+.content a {
+  margin-left: 10rem;
+}
+
 .content h1 {
   color: white;
-  margin: 20px 0px 20px;
-  font-size: 75px;
+  margin: 20px 0px 2px;
+  font-size: 80px;
 }
 
 .content h3 {
-  color: white;
-  font-size: 25px;
+  color: #f9004d;
+  font-size: 35px;
   margin-bottom: 50px;
 }
 
 .content h4 {
-  color: #fcfc;
+  color: #f9004d;
   letter-spacing: 2px;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .content .newsletter form {
@@ -168,6 +180,15 @@ span {
   margin-bottom: 20px;
 }
 
+.about .main .about-text h2:hover::after {
+  content: '';
+  background: #f9004d;
+  display: block;
+  height: 3px;
+  width: 250px;
+  margin: 1px 40px 10px;
+}
+
 .about .main .about-text h5 {
   color: #fff;
   letter-spacing: 2px;
@@ -213,6 +234,15 @@ span {
   font-size: 75px;
   margin: 30px auto;
   text-align: center;
+}
+
+.service .title h2:hover::after {
+  content: '';
+  background: #f9004d;
+  display: block;
+  height: 3px;
+  width: 250px;
+  margin: 1px auto 10px;
 }
 
 .service .box {
@@ -277,6 +307,13 @@ span {
   background-color: transparent;
   border: 2px solid #f9004d;
   cursor: pointer;
+}
+
+.service .box .card:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+          box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
 }
 
 .contact-me {
@@ -398,7 +435,30 @@ footer .end {
   font-size: 14px;
 }
 
-@media only screen and (max-width: 1046px) {
+@media only screen and (max-width: 1040px) {
+  .hero {
+    background-size: cover;
+  }
+  .hero nav {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .hero nav ul li {
+    padding: 10px 20px;
+  }
+  .content {
+    top: 60%;
+  }
+  .content h4 {
+    font-size: 35px;
+  }
+  .content h1 {
+    color: #000;
+    font-size: 70px;
+  }
+  .content h3 {
+    font-size: 38px;
+  }
   .about .main .about-text {
     margin-left: 20px;
     text-align: center;
@@ -410,13 +470,17 @@ footer .end {
     height: 100vh;
   }
   .hero nav {
-    padding-top: 5px;
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-top: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
   }
   .hero nav .logo {
-    font-size: 20px;
-    margin-left: 2px;
+    font-size: 25px;
+    margin-left: 20px;
+  }
+  .hero nav .btn {
+    padding: 10px 10px;
+    border-radius: 30px;
   }
   .content {
     top: 60%;
@@ -495,17 +559,49 @@ footer .end {
   }
 }
 
+@media only screen and (max-width: 770px) {
+  .hero #menu {
+    display: initial;
+    padding: 1rem 1.5rem;
+  }
+  .hero .navbar {
+    position: absolute;
+    top: 11%;
+    right: 0rem;
+    border-radius: .5rem;
+    width: 200px;
+    background: #fff;
+    border: 2px solid #f9004d;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .hero .navbar a {
+    font-size: 1rem;
+    display: block;
+    color: #000;
+    margin: 0.5rem;
+    margin-bottom: 0px;
+  }
+  .hero .navbar.active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    -webkit-transition: .2s ease-out;
+    transition: .2s ease-out;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .hero {
     height: 90vh;
   }
-  .hero nav {
-    padding-top: 3px;
-    padding-left: 2%;
-    padding-right: 2%;
-  }
   .hero nav .logo {
-    font-size: 10px;
+    font-size: 20px;
     margin-left: 2px;
   }
   .content {
@@ -545,6 +641,7 @@ footer .end {
   }
   .about .main .about-text {
     width: 350px;
+    margin-left: 130px;
   }
   .about .main .about-text h2 {
     font-size: 60px;
@@ -557,6 +654,7 @@ footer .end {
   .about .main .about-text p {
     margin-left: 40px;
     margin-right: 0px;
+    font-size: 18px;
   }
   .about .main .about-text button {
     margin-left: 50px;
@@ -581,21 +679,37 @@ footer .end {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .about .main .about-text {
+    width: 350px;
+    margin-left: 70px;
+    color: #000;
+  }
+}
+
+@media only screen and (max-width: 588px) {
+  .hero .navbar {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 529px) {
+  .hero .navbar {
+    top: 9%;
+    width: 200px;
+  }
+  .hero .navbar a {
+    margin: 0.1rem;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .hero {
     height: 60vh;
   }
-  .hero nav {
-    padding-top: 20px;
-    padding-left: 8%;
-    padding-right: 8%;
-  }
   .hero nav .logo {
-    font-size: 15px;
+    font-size: 20px;
     margin-left: 2px;
-  }
-  .hero nav ul li {
-    padding: 3px 5px;
   }
   .hero nav .btn {
     font-size: 15px;
@@ -604,27 +718,34 @@ footer .end {
     -webkit-transition: .4s;
     transition: .4s;
   }
+  .hero .navbar {
+    top: 8%;
+  }
   .content {
     top: 35%;
-    left: 18%;
+    left: 15%;
+  }
+  .content a {
+    margin-left: 5rem;
   }
   .content h1 {
-    color: #f9004d;
+    color: #000;
     margin: 10px 0px 10px;
     font-size: 40px;
   }
   .content h1 span {
-    color: #fff;
+    color: #000;
   }
   .content h3 {
-    color: #000;
-    font-size: 25px;
-    margin-bottom: 50px;
+    color: #fe1a63;
+    font-size: 26px;
+    margin-bottom: 20px;
   }
   .content h4 {
-    color: white;
+    color: #f9004d;
     letter-spacing: 2px;
     font-size: 20px;
+    margin-top: 60px;
   }
   .content .newsletter form input:first-child {
     width: 100%;
