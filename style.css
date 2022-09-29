@@ -316,6 +316,100 @@ span {
           box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
 }
 
+.project {
+  background: #101010;
+  width: 100%;
+  padding: 100px 0px;
+}
+
+.project .title h2 {
+  color: #fff;
+  font-size: 75px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.project .title h2:hover::after {
+  content: '';
+  background: #f9004d;
+  display: block;
+  height: 3px;
+  width: 250px;
+  margin: 1px auto 10px;
+}
+
+.project .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 400px;
+}
+
+.project .box a {
+  text-decoration: none;
+}
+
+.project .box .card {
+  height: 360px;
+  width: 335px;
+  background: #363333;
+  border-radius: 10px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.project .box .card img {
+  width: 335px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.project .box .card h5 {
+  color: white;
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.project .box .card .pra p {
+  color: #fcfc;
+  font-size: 15px;
+  line-height: 27px;
+  margin-bottom: 25px;
+}
+
+.project .box .card .button {
+  background-color: #f9004d;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 9px 22px;
+  border-radius: 30px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.project .box .card .button:hover {
+  background-color: transparent;
+  border: 2px solid #f9004d;
+  cursor: pointer;
+}
+
+.project .box .card:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+          box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+}
+
 .contact-me {
   width: 100%;
   height: 290px;
@@ -435,6 +529,21 @@ footer .end {
   font-size: 14px;
 }
 
+@media only screen and (max-width: 1090px) {
+  .project {
+    padding: 40px 0px;
+  }
+  .project .title h2 {
+    font-size: 60px;
+  }
+  .project .box .card {
+    width: 300px;
+  }
+  .project .box .card img {
+    width: 300px;
+  }
+}
+
 @media only screen and (max-width: 1040px) {
   .hero {
     background-size: cover;
@@ -462,6 +571,12 @@ footer .end {
   .about .main .about-text {
     margin-left: 20px;
     text-align: center;
+  }
+  .project .box .card {
+    width: 300px;
+  }
+  .project .box .card img {
+    width: 300px;
   }
 }
 
@@ -536,6 +651,33 @@ footer .end {
   .service i {
     font-size: 6px;
   }
+  .project {
+    padding: 40px 0px;
+  }
+  .project .title h2 {
+    font-size: 60px;
+  }
+  .project .box .card {
+    width: 290px;
+  }
+  .project .box .card img {
+    width: 290px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .project {
+    padding: 40px 0px;
+  }
+  .project .title h2 {
+    font-size: 60px;
+  }
+  .project .box .card {
+    width: 250px;
+  }
+  .project .box .card img {
+    width: 250px;
+  }
 }
 
 @media only screen and (max-width: 838px) {
@@ -557,42 +699,23 @@ footer .end {
   .service .box .card i {
     font-size: 40px;
   }
-}
-
-@media only screen and (max-width: 770px) {
-  .hero #menu {
-    display: initial;
-    padding: 1rem 1.5rem;
+  .project {
+    padding: 40px 0px;
   }
-  .hero .navbar {
-    position: absolute;
-    top: 11%;
-    right: 0rem;
-    border-radius: .5rem;
-    width: 200px;
-    background: #fff;
-    border: 2px solid #f9004d;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 0;
-    -webkit-transform-origin: top right;
-            transform-origin: top right;
-    -webkit-transition: none;
-    transition: none;
+  .project .title h2 {
+    font-size: 60px;
   }
-  .hero .navbar a {
-    font-size: 1rem;
-    display: block;
-    color: #000;
-    margin: 0.5rem;
-    margin-bottom: 0px;
+  .project .box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .hero .navbar.active {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-    -webkit-transition: .2s ease-out;
-    transition: .2s ease-out;
+  .project .box .card {
+    width: 400px;
+  }
+  .project .box .card img {
+    width: 400px;
   }
 }
 
@@ -677,6 +800,24 @@ footer .end {
   .service .box .card i {
     font-size: 40px;
   }
+  .project {
+    padding: 40px 0px;
+  }
+  .project .title h2 {
+    font-size: 60px;
+  }
+  .project .box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project .box .card {
+    width: 400px;
+  }
+  .project .box .card img {
+    width: 400px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -687,19 +828,13 @@ footer .end {
   }
 }
 
-@media only screen and (max-width: 588px) {
-  .hero .navbar {
-    width: 150px;
+@media only screen and (max-width: 550px) {
+  .hero nav {
+    padding-left: 3%;
+    padding-right: 3%;
   }
-}
-
-@media only screen and (max-width: 529px) {
-  .hero .navbar {
-    top: 9%;
-    width: 200px;
-  }
-  .hero .navbar a {
-    margin: 0.1rem;
+  .hero nav ul li {
+    padding: 10px 10px;
   }
 }
 
@@ -708,7 +843,7 @@ footer .end {
     height: 60vh;
   }
   .hero nav .logo {
-    font-size: 20px;
+    font-size: 15px;
     margin-left: 2px;
   }
   .hero nav .btn {
@@ -718,8 +853,9 @@ footer .end {
     -webkit-transition: .4s;
     transition: .4s;
   }
-  .hero .navbar {
-    top: 8%;
+  .hero nav ul li {
+    padding: 10px 7px;
+    font-size: 13px;
   }
   .content {
     top: 35%;
@@ -813,6 +949,24 @@ footer .end {
   .service .box .card i {
     font-size: 40px;
   }
+  .project {
+    padding: 40px 0px;
+  }
+  .project .title h2 {
+    font-size: 60px;
+  }
+  .project .box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project .box .card {
+    width: 355px;
+  }
+  .project .box .card img {
+    width: 355px;
+  }
   .contact-me {
     height: 250px;
   }
@@ -828,6 +982,17 @@ footer .end {
   footer p:nth-child(2) {
     width: 300px;
     margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .hero nav .logo {
+    font-size: 13px;
+    margin-left: 2px;
+  }
+  .hero nav ul li {
+    padding: 10px 5px;
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=style.css.map */
